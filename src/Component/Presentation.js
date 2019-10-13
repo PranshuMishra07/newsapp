@@ -49,18 +49,18 @@ export default class Presentation extends Component {
                                 <div>
                                     <ExpansionPanel square expanded={expanded === id} onChange={this.handleChange(id)}>
                                         <ExpansionPanelSummary >
-                                            <Grid container spacing={16} wrap >
-                                                <Grid item xs={1}> <img src={value.urlToImage} alt="no image found" style={{ width: '80px', height: '80px' }} /> </Grid>
-                                                <Grid item xs={8}>{value.title}</Grid>
-                                                <Grid item xs={2}>{value.source.name}</Grid>
-                                                <Grid item xs={1}>{value.publishedAt}</Grid>
+                                            <Grid container xs={12} spacing={16} wrap direction="row" justify="space-around" alignitems="flex-start">
+                                                <Grid item > <img src={value.urlToImage} alt="no image found" style={{display: 'block',  maxWidth:'200px',  maxHeight:'95px', width: 'auto',  height: 'auto'}} /> </Grid>
+                                                <Grid item  xs={6} sm={3}>{value.title}</Grid>
+                                                <Grid item >{value.source.name}</Grid>
+                                                <Grid item >{value.publishedAt}</Grid>
                                             </Grid>
                                         </ExpansionPanelSummary>
                                         <ExpansionPanelDetails>
                                             <Grid container spacing={16}>
                                                 <Grid item xs={12}> {value.content} </Grid>
-                                                <Grid item xs={10}><a href={value.url} target="_blank" >{value.url} </a> </Grid>
-                                                <Grid item xs={2}>{value.author} </Grid>
+                                                <Grid item ><a href={value.url} target="_blank" >{value.url} </a> </Grid>
+                                                <Grid item xs={2} sm={1 }>{value.author} </Grid>
                                             </Grid>
                                         </ExpansionPanelDetails>
                                     </ExpansionPanel>
