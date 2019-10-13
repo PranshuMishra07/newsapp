@@ -57,7 +57,7 @@ export default class Presentation extends Component {
                                             </Grid>
                                         </ExpansionPanelSummary>
                                         <ExpansionPanelDetails>
-                                            <Grid container spacing={16}>
+                                            <Grid container xs={12} spacing={16} wrap direction="row" justify="space-around" alignitems="flex-start">
                                                 <Grid item xs={12}> {value.content} </Grid>
                                                 <Grid item ><a href={value.url} target="_blank" >{value.url} </a> </Grid>
                                                 <Grid item xs={2} sm={1 }>{value.author} </Grid>
