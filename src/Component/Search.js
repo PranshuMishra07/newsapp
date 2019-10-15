@@ -6,7 +6,7 @@ class Search extends Component {
     state = {
         data: [],
         loading: null,
-        value: ''
+        value: 6
     };
 
     search = async val => {
@@ -18,19 +18,15 @@ class Search extends Component {
         this.setState({ data, loading: false });
     };
 
-    onChangeHandler = async e => {
-        this.search(e.target.value);
-        this.setState({ value: e.target.value });
-    };
-    
+    componentWillReceiveProps(nextProps) {
+        this.search(this.state.value);
+        this.setState({ value: nextProps.data });
+    }
+
+
     render() {
         return (
             <div>
-                <input
-                    value={this.state.value}
-                    onChange={e => this.onChangeHandler(e)}
-                    placeholder="Type something to search"
-                />
                 <Presentation data={this.state.data} />
             </div>
         );

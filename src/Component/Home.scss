@@ -1,14 +1,13 @@
- 
+
   .box {
     width: 100px;
     height: 100px;
-    background: #ff1c68;
+    background: #cf2317;
     transform-origin: 50% 50%;
-    display:inline-block;
+    display:'-ms-inline-flexbox';
     align-items: center;
     justify-content: center;
-    margin-top:100px;
+    margin-top:50%;
 
-    
-  }
+    }
   
